@@ -14,13 +14,11 @@ const Signup = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password } = credentials;
-    const response = await fetch("http://localhost:5000/api/auth/createuser", {
+    const response = await fetch("http://127.0.0.1:5000/api/auth/createuser", {
       method: "POST",
 
       headers: {
-        "Content-Type": "application/json",
-        "auth-token":
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjU1NzI4OWE4OTk3NDQ4Y2NmMzYwYTQzIn0sImlhdCI6MTcwMDIxMDg0Mn0.sbRyAEGM4pviRpJ02XBnVjdxqzay_O1SMeQphH08cHU",
+        "Content-Type": "application/json"
       },
 
       body: JSON.stringify({
@@ -52,7 +50,7 @@ const Signup = (props) => {
   return (
     <div className="container mt-2">
     
-    <h2 className="my-2">Create an account to use iNotebook</h2>
+    <h2 className="my-2">Create an account to use NoteTrackr</h2>
       <form onSubmit={handleSubmit}>
         <div className="my-3">
           <label htmlFor="name" className="form-label">
@@ -65,6 +63,7 @@ const Signup = (props) => {
             aria-describedby="emailHelp"
             name="name"
             onChange={onChange}
+            placeholder="Enter your Name"
           />
         </div>
         <div className="mb-3">
@@ -78,6 +77,7 @@ const Signup = (props) => {
             aria-describedby="emailHelp"
             onChange={onChange}
             name="email"
+            placeholder="Enter your Email"
           />
           <div id="emailHelp" className="form-text">
             We'll never share your email with anyone else.
@@ -95,6 +95,7 @@ const Signup = (props) => {
             name="password"
             minLength={5}
             required
+            placeholder="Enter your Password"
           />
         </div>
         <div className="mb-3">
@@ -109,6 +110,7 @@ const Signup = (props) => {
             name="cpassword"
             minLength={5}
             required
+            placeholder="Re-Enter your Password"
           />
         </div>
 

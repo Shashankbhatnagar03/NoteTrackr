@@ -9,7 +9,7 @@ const Login = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:5000/api/auth/login", {
+    const response = await fetch("http://127.0.0.1:5000/api/auth/login", {
       method: "POST",
 
       headers: {
@@ -44,7 +44,7 @@ const Login = (props) => {
 
   return (
     <div className="mt-3">
-    <h2>Login to continue to iNotebook</h2>
+    <h2>Login to continue to NoteTrackr</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">
@@ -58,6 +58,7 @@ const Login = (props) => {
             value={credentials.email}
             name="email"
             aria-describedby="emailHelp"
+            placeholder="Enter your Email"
           />
           <div id="emailHelp" className="form-text">
             We'll never share your email with anyone else.
@@ -74,12 +75,18 @@ const Login = (props) => {
             value={credentials.password}
             className="form-control"
             id="password"
+            placeholder="Enter your Password"
           />
         </div>
+        <center>
 
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary my-3">
           Submit
         </button>
+        <p className ="text-center last-para mx-3">Don't have an account?
+        <a href="/signup">Signup</a></p>
+        </center>
+
       </form>
     </div>
   );

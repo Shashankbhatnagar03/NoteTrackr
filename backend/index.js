@@ -1,17 +1,12 @@
-const connectToMongo = require('./db');
+require('dotenv').config()
 const express = require('express')
-var cors = require('cors')
-connectToMongo();
+const cors = require('cors')
+const db =require("./db")
 
-var app = express()
+const port = 5000;
+const app = express()
 
-app.use(cors())
-
-
-
-
-const port = 5000
-
+app.use(cors());
 app.use(express.json());
 
 
@@ -26,7 +21,6 @@ app.use('/api/notes' , require('./routes/notes'))
 
 
 
-
 app.listen(port, () => {
-  console.log(`iNotebook listening on port ${port}`)
+  console.log(`NoteTackr listening on port`+ port)
 })
