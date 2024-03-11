@@ -3,7 +3,7 @@
 NoteTrackr presents a comprehensive MERN (MongoDB, Express.js, React, Node.js) stack platform designed for seamless note management. Users can effortlessly create, modify, access, and store notes, alongside the ability to designate favorites for easy retrieval. With a robust authentication system, NoteTrackr ensures the utmost data privacy and secure user access.
 
 ## Explore NoteTrackr Live
-[Access the NoteTrackr website here](https://dapper-cheesecake-9c2bda.netlify.app)
+[Access the NoteTrackr website here](https://65eed071d697052878669cee--wondrous-marigold-a5afe8.netlify.app/)
 
 **Core Features:**
 
