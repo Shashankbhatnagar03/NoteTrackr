@@ -14,7 +14,7 @@ const Signup = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password } = credentials;
-    const response = await fetch("http://127.0.0.1:5000/api/auth/createuser", {
+    const response = await fetch("https://notetrackr.onrender.com/api/auth/createuser", {
       method: "POST",
 
       headers: {
